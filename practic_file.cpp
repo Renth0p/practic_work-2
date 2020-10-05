@@ -215,9 +215,52 @@ int main()
             s = cbrt(abs(sin(y)));
             cout << "3)s = " << setprecision(3) << s << endl;
             
-         }
-
-    } else if (n <= 0 || n > 8) {
+        }
+    } else if (n == 9) {
+        
+        cout << "пример # 9." << endl;
+        
+        cout << "Введите x: ";
+        cin >> x;
+        cout << "Введите y: ";
+        cin >> y;
+        
+        if (x > abs(y) ) {
+            
+            s = 2*pow(x,3) + 3*pow(y,2);
+            cout << "1)s = " << setprecision(3) << s << endl;
+        
+        } else if (3 < x < abs(y)) {
+            s = abs(x-y);
+            cout << "2)s = " << setprecision(3) << s << endl;
+        } else {
+            s = cbrt(abs(x-y));
+            cout << "3)s = " << setprecision(3) << s << endl;
+            
+        }
+    } else if (n == 10) {
+        
+        cout << "пример # 10." << endl;
+        
+        cout << "Введите x: ";
+        cin >> x;
+        cout << "Введите y: ";
+        cin >> y;
+        
+        if (abs(x*y) > 10) {
+            
+            s = pow(pow(x,2) + y,3);
+            cout << "1)s = " << setprecision(3) << s << endl;
+        
+        } else if (abs(x*y) < 10) {
+            s = exp(x+y);
+            cout << "2)s = " << setprecision(3) << s << endl;
+        } else {
+            s = cbrt(abs(x))+y;
+            cout << "3)s = " << setprecision(3) << s << endl;
+            
+        }
+    } else if (n <= 0 || n > 15) {
 
         cout << "Извините, но такого примера не существует. Попробуйте перезапустить программу и выбрать другой пример!";
 
