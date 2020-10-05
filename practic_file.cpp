@@ -9,7 +9,7 @@ int main()
     double x, y, s, b;
     int n;
 
-    cout << "Введите значение n от 1 до 7, это число будет являться номером примера" << endl;
+    cout << "Введите значение n от 1 до 15, это число будет являться номером примера" << endl;
     cout << "n= ";
     cin >> n;
 
@@ -194,8 +194,30 @@ int main()
             cout << "3)s = " << setprecision(3) << s << endl;
 
         }
+    } else if (n == 8) {
+        
+        cout << "пример # 8." << endl;
+        
+        cout << "Введите x: ";
+        cin >> x;
+        cout << "Введите y: ";
+        cin >> y;
+        
+        if (x/y < 0) {
+            
+            s = pow((pow(x,2)+ y),3);
+            cout << "1)s = " << setprecision(3) << s << endl;
+        
+        } else if (x/y > 0) {
+            s = log10(abs(x/y) + x/y);
+            cout << "2)s = " << setprecision(3) << s << endl;
+        } else {
+            s = cbrt(abs(sin(y)));
+            cout << "3)s = " << setprecision(3) << s << endl;
+            
+         }
 
-    } else if (n <= 0 || n > 7) {
+    } else if (n <= 0 || n > 8) {
 
         cout << "Извините, но такого примера не существует. Попробуйте перезапустить программу и выбрать другой пример!";
 
